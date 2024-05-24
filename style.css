@@ -12,7 +12,7 @@ body {
 	width: 1080px;
 	height: 2340px;
 	background-image: linear-gradient(
-		-80deg,
+		-63deg,
 		#f5bde6 0% 9%,
 		#c6a0f6 9% 18%,
 		#ed8796 18% 27%,
@@ -28,6 +28,15 @@ body {
 
 	display: flex;
 	flex-direction: column;
+	margin-top: -20px;
+}
+
+#hearts {
+	/* load from heart.svg */
+	width: 100%;
+	height: 100%;
+	background: url("heart.svg") repeat;
+	background-size: 200px;
 }
 
 #tray {
@@ -35,11 +44,6 @@ body {
 	padding-bottom: 52px;
 	height: 320px;
 	padding-top: 52px;
-
-	border-top-left-radius: 50px;
-	border-top-right-radius: 50px;
-
-	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
 
 	background: #24273a;
 
