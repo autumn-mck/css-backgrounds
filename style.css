@@ -11,8 +11,20 @@ body {
 #screen {
 	width: 1080px;
 	height: 2340px;
+
+	display: flex;
+	flex-direction: column;
+	margin-top: 0px;
+	position: relative;
+}
+
+#background {
+	--margin-top: 20px;
+
+	width: 100%;
+	height: calc(100% - var(--margin-top));
 	background-image: linear-gradient(
-		-63deg,
+		-63.5deg,
 		#f5bde6 0% 9%,
 		#c6a0f6 9% 18%,
 		#ed8796 18% 27%,
@@ -26,9 +38,11 @@ body {
 		#8aadf4 90% 100%
 	);
 
-	display: flex;
-	flex-direction: column;
-	margin-top: -20px;
+	background-size: 100% 100%;
+	top: calc(var(--margin-top) - 320px - 20px);
+	left: 0;
+	position: absolute;
+	z-index: -1;
 }
 
 #hearts {
@@ -37,12 +51,14 @@ body {
 	height: 100%;
 	background: url("heart.svg") repeat;
 	background-size: 200px;
+	border-top: #24273a 66px solid;
+	/* opacity: 0.5; */
 }
 
 #tray {
 	width: 100%;
 	padding-bottom: 52px;
-	height: 320px;
+	height: calc(380px + 80px);
 	padding-top: 52px;
 
 	background: #24273a;
